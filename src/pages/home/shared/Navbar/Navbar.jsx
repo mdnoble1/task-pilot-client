@@ -35,14 +35,26 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/contact"
+              to="/login"
               className={({ isActive }) =>
                 isActive
-                  ? `text-blue-400 border-b-2 border-b-blue-400 flex items-center gap-3 font-bold text-2xl uppercase`
+                  ? `text-white border-b-2 border-b-white flex items-center gap-3 font-bold text-2xl uppercase`
                   : `nav-text flex items-center gap-3 font-bold text-xl uppercase`
               }
             >
-              Contact
+              Login
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/register"
+              className={({ isActive }) =>
+                isActive
+                  ? `text-white border-b-2 border-b-white flex items-center gap-3 font-bold text-2xl uppercase`
+                  : `nav-text flex items-center gap-3 font-bold text-xl uppercase`
+              }
+            >
+              Register
             </NavLink>
           </li>
         </ul>
