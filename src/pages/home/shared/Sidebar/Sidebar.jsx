@@ -2,13 +2,13 @@ import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div className="drawer-side">
+    <div className="drawer-side z-10">
       <label
         htmlFor="my-drawer-3"
         aria-label="close sidebar"
         className="drawer-overlay"
       ></label>
-      <ul className="menu p-4 w-80 min-h-full bg-base-200">
+      <ul className="menu p-10 w-80 min-h-full bg-base-200">
         {/* Sidebar content here */}
         <div className="flex justify-end"></div>
         <li>
@@ -16,8 +16,8 @@ const Sidebar = () => {
             to="/"
             className={({ isActive }) =>
               isActive
-                ? `text-[#13ab94] w-fit rounded-lg border-b-2 border-b-[#13ab94] flex items-center gap-3 font-bold text-xl uppercase`
-                : `nav-text flex items-center gap-3 font-bold text-lg uppercase`
+                ? `text-[#13ab94] w-full rounded-lg border-b-2 border-b-[#13ab94] flex items-center justify-center gap-3 font-bold text-xl uppercase`
+                : `nav-text flex items-center justify-center gap-3 font-bold text-lg uppercase`
             }
           >
             Home
@@ -25,26 +25,26 @@ const Sidebar = () => {
         </li>
         <li>
           <NavLink
-            to="/contact"
+            to="/login"
             className={({ isActive }) =>
               isActive
-                ? `text-blue-400 w-fit rounded-xl  border-b-2 border-b-blue-400 flex items-center gap-3 font-bold text-xl uppercase`
-                : `nav-text flex items-center gap-3 font-bold text-lg uppercase`
+                ? `text-[#13ab94] w-full rounded-lg border-b-2 border-b-[#13ab94] flex items-center justify-center gap-3 font-bold text-xl uppercase`
+                : `nav-text flex items-center justify-center gap-3 font-bold text-lg uppercase`
             }
           >
-            Contact
+            Login
           </NavLink>
         </li>
         <li>
           <NavLink
-            to="/blog"
+            to="/register"
             className={({ isActive }) =>
               isActive
-                ? `text-blue-400 w-fit rounded-xl  border-b-2 border-b-blue-400 flex items-center gap-3 font-bold text-xl uppercase`
-                : `nav-text flex items-center gap-3 font-bold text-lg uppercase`
+                ? `text-[#13ab94] w-full rounded-lg border-b-2 border-b-[#13ab94] flex items-center justify-center gap-3 font-bold text-xl uppercase`
+                : `nav-text flex items-center justify-center gap-3 font-bold text-lg uppercase`
             }
           >
-            Blog
+            Register
           </NavLink>
         </li>
       </ul>
