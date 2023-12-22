@@ -1,12 +1,13 @@
+/* eslint-disable react/no-unescaped-entities */
 import logo from "../../../../assets/icons/task-pilot-logo1.png";
 import { FiMenu } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="max-w-screen-2xl navbar flex items-center justify-between px-4 lg:px-16 py-2 lg:py-6">
+    <div className="max-w-screen-2xl bg-[#13ab94] navbar flex items-center justify-between px-4 lg:px-16 py-2 lg:py-6 mt-4 rounded-md">
       <div>
-        <img className="w-8 lg:w-12" src={logo} alt="logo" />
+        <img className="w-36 lg:w-52" src={logo} alt="logo" />
       </div>
       <div className="lg:hidden">
         <label
@@ -14,7 +15,7 @@ const Navbar = () => {
           aria-label="open sidebar"
           className="btn btn-square btn-ghost"
         >
-          <FiMenu></FiMenu>
+          <FiMenu className="text-2xl text-white"></FiMenu>
         </label>
       </div>
 
@@ -25,7 +26,7 @@ const Navbar = () => {
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? `text-blue-400 border-b-2 border-b-blue-400 flex items-center gap-3 font-bold text-2xl uppercase`
+                  ? `text-white border-b-2 border-b-white flex items-center gap-3 font-bold text-2xl uppercase`
                   : `nav-text flex items-center gap-3 font-bold text-xl uppercase`
               }
             >
@@ -45,16 +46,9 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <a
-              href="#skill"
-              className={({ isActive }) =>
-                isActive
-                  ? `text-blue-400 border-b-2 border-b-blue-400 flex items-center gap-3 font-bold text-2xl uppercase`
-                  : `nav-text flex items-center gap-3 font-bold text-xl uppercase`
-              }
-            >
-              Skills
-            </a>
+            <NavLink to="/login">
+              <button className="btn btn-outline font-semibold text-lg text-white uppercase">Let's Explore</button>
+            </NavLink>
           </li>
         </ul>
       </div>

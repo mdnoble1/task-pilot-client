@@ -16,7 +16,7 @@ const Sidebar = () => {
             to="/"
             className={({ isActive }) =>
               isActive
-                ? `text-blue-400 w-fit rounded-xl border-b-2 border-b-blue-400 flex items-center gap-3 font-bold text-xl uppercase`
+                ? `text-[#13ab94] w-fit rounded-lg border-b-2 border-b-[#13ab94] flex items-center gap-3 font-bold text-xl uppercase`
                 : `nav-text flex items-center gap-3 font-bold text-lg uppercase`
             }
           >
