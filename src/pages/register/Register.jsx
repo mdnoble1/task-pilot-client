@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import useAuth from "../../hooks/useAuth";
+import SocialLogin from "../../components/SocialLogin";
 
 const Register = () => {
   const {
@@ -20,15 +21,17 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const onSubmit = (data) => {
-    createUser(data.email, data.password).then((result) => {
-      const loggedUser = result.user;
-      updateUserProfile(data.name, data.photoURL)
-        .then(() => {
-          const userInfo = {
-            name: data.name,
-            email: data.email,
-          };
-        })
+    createUser(data.email, data.password)
+        .then((result) => {
+            const loggedUser = result.user;
+             updateUserProfile(data.name, data.photoURL)
+                .then(() => {
+                    const userInfo = {
+                    name: data.name,
+                    email: data.email,
+                };
+                navigate("/");
+            })
         .catch((error) => console.log(error));
     });
   };
@@ -150,6 +153,7 @@ const Register = () => {
                 <span className="text-[#13ab94]">Login</span>
               </Link>
             </p>
+            <SocialLogin></SocialLogin>
           </div>
         </div>
 
