@@ -5,8 +5,12 @@ import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
 import Dashboard from "../layouts/Dashboard";
 import AddTask from "../pages/dashboard/AddTask/AddTask";
+import TaskSpace from "../pages/dashboard/TaskSpace/TaskSpace";
 import DashboardLanding from "../pages/dashboard/DashboardLanding/DashboardLanding";
 import PrivateRoute from "./PrivateRoute";
+import TaskToDo from "../pages/dashboard/TaskToDo/TaskToDo";
+import OngoingTask from "../pages/dashboard/OngoingTask/OngoingTask";
+import CompletedTask from "../pages/dashboard/CompletedTask/CompletedTask";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +42,22 @@ const router = createBrowserRouter([
       {
         path: "addTask",
         element: <AddTask></AddTask>,
+      },
+      {
+        path: "taskSpace",
+        element: <TaskSpace></TaskSpace>,
+      },
+      {
+        path: "todoTask",
+        element: <TaskToDo></TaskToDo>,
+      },
+      {
+        path: "ongoingTask",
+        element: <OngoingTask></OngoingTask>,
+      },
+      {
+        path: "completedTask",
+        element: <CompletedTask></CompletedTask>,
       },
     ],
   },

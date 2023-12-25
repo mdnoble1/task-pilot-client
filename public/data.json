@@ -10,12 +10,48 @@
       },
     {
         "user_email": "toni@khan.com",
+        "task_name": "Project Kickoff Meeting",
+        "description": "Discuss project goals, milestones, and assign initial tasks.",
+        "time": "09:30",
+        "date": "2023-04-10",
+        "status": "To Do",
+        "priority": "High"
+      },
+    {
+        "user_email": "toni@khan.com",
+        "task_name": "Project Kickoff Meeting",
+        "description": "Discuss project goals, milestones, and assign initial tasks.",
+        "time": "09:30",
+        "date": "2023-04-10",
+        "status": "To Do",
+        "priority": "High"
+      },
+    {
+        "user_email": "toni@khan.com",
         "task_name": "Research Proposal",
         "description": "Discuss project goals, milestones, and assign initial tasks.",
         "time": "09:30",
         "date": "2023-04-10",
         "status": "On Going",
         "priority": "Medium"
+      },
+    {
+        "user_email": "toni@khan.com",
+        "task_name": "Research Proposal",
+        "description": "Discuss project goals, milestones, and assign initial tasks.",
+        "time": "09:30",
+        "date": "2023-04-10",
+        "status": "On Going",
+        "priority": "Medium"
+      },
+    {
+        "user_email": "toni@khan.com",
+        "task_name": "Study Group Session",
+        "description": "Discuss project goals, milestones, and assign initial tasks.",
+        "time": "09:30",
+        "date": "2023-04-10",
+        "status": "Completed",
+        "priority": "Low"
       },
     {
         "user_email": "toni@khan.com",
