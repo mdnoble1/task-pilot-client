@@ -2,7 +2,7 @@ import overviewImg from "../../../assets/images/overview2.png";
 
 const Overview = () => {
   return (
-    <div className="mt-10 lg:my-24">
+    <div className="my-10 lg:my-20">
       <div className="hero">
         <div className="hero-content justify-between flex-col w-full lg:flex-row">
           <div className="text-center lg:text-left">
