@@ -1,4 +1,4 @@
-import login from "../../assets/images/login.png";
+import login from "../../assets/images/login2.png";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 // import Swal from "sweetalert2";
@@ -67,10 +67,10 @@ const Login = () => {
   };
 
   return (
-    <section className="w-10/12 lg:w-full mx-auto lg:mt-10">
+    <section className="w-11/12 lg:w-full mx-auto lg:my-20">
       <div className="flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-32">
-        <div className="mt-10 lg:mt-0">
-          <img className="rounded-lg" src={login} alt="" />
+        <div className="my-10 lg:mt-0 w-full">
+          <img className="rounded-lg mx-auto drop-shadow-2xl" src={login} alt="" />
         </div>
         <div className="w-full bg-slate-100 rounded-lg drop-shadow-2xl mx-auto mt-10 lg:mt-0">
           <form
@@ -124,7 +124,7 @@ const Login = () => {
           </form>
           <div className="mt-4 text-center pb-12">
             <p className="font-medium text-lg mb-4">
-              New in TechRupture ? Please{" "}
+              New in Task Pilot ? Please{" "}
               <Link to="/register">
                 <span className="text-[#13ab94]">Register</span>
               </Link>
