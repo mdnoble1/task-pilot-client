@@ -8,7 +8,7 @@ const TaskSpaceCard = ({ task }) => {
   const { task_name, description, time, date, status, priority } = task || {};
 
   return (
-    <section className="border-2 border-[#13ab94] rounded-md w-11/12 mx-auto p-4 my-10">
+    <section className="border-2 border-[#13ab94] rounded-md w-11/12 mx-auto p-4 my-10 cursor-grab">
       <div>
         <h2 className="flex items-center gap-2 font-bold text-black text-lg mb-2">
           <MdDriveFileRenameOutline className="text-2xl text-black"></MdDriveFileRenameOutline>{" "}
