@@ -4,7 +4,7 @@ const DashboardLanding = () => {
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="text-center">
-        <h2 className="font-bold text-xl md:text-3xl text-[#13ab94] my-12">
+        <h2 className="font-bold text-xl md:text-3xl text-[#13ab94] my-12 mx-2">
           Welcome To Task Pilot Dashboard 🚀
         </h2>
         {/* <p className="font-semibold text-lg text-gray-500 text-center mb-6">
