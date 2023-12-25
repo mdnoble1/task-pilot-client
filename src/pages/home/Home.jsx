@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Banner from "./banner/Banner";
 import Footer from "./shared/Footer/Footer";
+import ForWhom from "./forWhom/ForWhom";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
         <title>Task Pilot | Home</title>
       </Helmet>
       <Banner></Banner>
+      <ForWhom></ForWhom>
       <Footer></Footer>
     </div>
   );
