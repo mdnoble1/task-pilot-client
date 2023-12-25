@@ -2,22 +2,8 @@
 import logo from "../../../../assets/icons/task-pilot-logo1.png";
 import { FiMenu } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
-import useAuth from "../../../../hooks/useAuth";
 
 const Navbar = () => {
-  const { user, logOut } = useAuth();
-
-  const handleLogOut = () => {
-    logOut()
-      .then(() => {
-        console.log("user logged out");
-        // navigate("/");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
-
   return (
     <div className="max-w-screen-2xl bg-[#13ab94] navbar flex items-center justify-between px-4 lg:px-16 py-2 lg:py-6 lg:mt-4 lg:rounded-md">
       <div>
@@ -83,37 +69,6 @@ const Navbar = () => {
               Dashboard
             </NavLink>
           </li>
-          <div className="mt-4">
-            {user && (
-              <>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <label
-                      tabIndex={0}
-                      className="btn btn-ghost btn-circle avatar"
-                    >
-                      <div className="w-12 rounded-full border-2 border-white">
-                        <img src={user.photoURL} />
-                      </div>
-                    </label>
-                  </div>
-                  <div>
-                    <span className="block font-semibold text-xs text-center text-white uppercase">
-                      {user.displayName}
-                    </span>
-                    <div className="text-center">
-                      <button
-                        onClick={handleLogOut}
-                        className="btn btn-xs btn-outline text-[#13a0fe]"
-                      >
-                        Logout
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
         </ul>
       </div>
     </div>

@@ -36,7 +36,7 @@ const Banner = () => {
             alt=""
           />
           <div className="absolute bottom-[40px] left-[150px] md:bottom-[60px] md:left-[290px] lg:bottom-[140px] lg:left-[650px]">
-            <NavLink to="/login">
+            <NavLink to="/dashboard">
               <button className="btn btn-sm md:btn-md lg:btn-lg bg-[#129efc] hover:bg-blue-700 border-0 font-semibold md:text-2xl text-white uppercase drop-shadow-2xl">
                 Let's Explore{" "}
                 <FaRegPaperPlane className="text-lg md:text-2xl"></FaRegPaperPlane>
@@ -51,7 +51,7 @@ const Banner = () => {
             alt=""
           />
           <div className="absolute bottom-[40px] left-[150px] md:bottom-[60px] md:left-[290px] lg:bottom-[140px] lg:left-[650px]">
-            <NavLink to="/login">
+            <NavLink to="/dashboard">
               <button className="btn btn-sm md:btn-md lg:btn-lg bg-[#129efc] hover:bg-blue-700 border-0 font-semibold md:text-2xl text-white uppercase drop-shadow-2xl">
                 Let's Explore{" "}
                 <FaRegPaperPlane className="text-lg md:text-2xl"></FaRegPaperPlane>
@@ -66,7 +66,7 @@ const Banner = () => {
             alt=""
           />
           <div className="absolute bottom-[40px] left-[150px] md:bottom-[60px] md:left-[290px] lg:bottom-[140px] lg:left-[650px]">
-            <NavLink to="/login">
+            <NavLink to="/dashboard">
               <button className="btn btn-sm md:btn-md lg:btn-lg bg-[#129efc] hover:bg-blue-700 border-0 font-semibold md:text-2xl text-white uppercase drop-shadow-2xl">
                 Let's Explore{" "}
                 <FaRegPaperPlane className="text-lg md:text-2xl"></FaRegPaperPlane>
@@ -81,7 +81,7 @@ const Banner = () => {
             alt=""
           />
           <div className="absolute bottom-[40px] left-[150px] md:bottom-[60px] md:left-[290px] lg:bottom-[140px] lg:left-[650px]">
-            <NavLink to="/login">
+            <NavLink to="/dashboard">
               <button className="btn btn-sm md:btn-md lg:btn-lg bg-[#129efc] hover:bg-blue-700 border-0 font-semibold md:text-2xl text-white uppercase drop-shadow-2xl">
                 Let's Explore{" "}
                 <FaRegPaperPlane className="text-lg md:text-2xl"></FaRegPaperPlane>
@@ -96,7 +96,7 @@ const Banner = () => {
             alt=""
           />
           <div className="absolute bottom-[40px] left-[150px] md:bottom-[60px] md:left-[290px] lg:bottom-[140px] lg:left-[650px]">
-            <NavLink to="/login">
+            <NavLink to="/dashboard">
               <button className="btn btn-sm md:btn-md lg:btn-lg bg-[#129efc] hover:bg-blue-700 border-0 font-semibold md:text-2xl text-white uppercase drop-shadow-2xl">
                 Let's Explore{" "}
                 <FaRegPaperPlane className="text-lg md:text-2xl"></FaRegPaperPlane>

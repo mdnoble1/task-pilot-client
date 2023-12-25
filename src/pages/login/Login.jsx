@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { signInUser } = useAuth();
@@ -66,6 +67,9 @@ const Login = () => {
 
   return (
     <section className="w-11/12 lg:w-full mx-auto lg:my-20">
+      <Helmet>
+        <title>Task Pilot | Login</title>
+      </Helmet>
       <div className="flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-32">
         <div className="my-10 lg:mt-0 w-full">
           <img

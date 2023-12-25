@@ -6,6 +6,7 @@ import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import useAuth from "../../hooks/useAuth";
 import SocialLogin from "../../components/SocialLogin";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const {
@@ -38,6 +39,9 @@ const Register = () => {
 
   return (
     <section className="w-11/12 lg:w-full mx-auto lg:my-20">
+      <Helmet>
+        <title>Task Pilot | Register</title>
+      </Helmet>
       <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-32">
         <div className="w-11/12 lg:w-full bg-slate-100 rounded-lg drop-shadow-2xl mx-auto mt-10 lg:mt-0">
           <form
