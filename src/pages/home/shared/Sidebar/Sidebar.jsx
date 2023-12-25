@@ -47,6 +47,18 @@ const Sidebar = () => {
             Register
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/dashboard"
+            className={({ isActive }) =>
+              isActive
+                ? `text-[#13ab94] w-full rounded-lg border-b-2 border-b-[#13ab94] flex items-center justify-center gap-3 font-bold text-xl uppercase`
+                : `nav-text flex items-center justify-center gap-3 font-bold text-lg uppercase`
+            }
+          >
+            Dashboard
+          </NavLink>
+        </li>
       </ul>
     </div>
   );

@@ -37,9 +37,9 @@ const Register = () => {
   };
 
   return (
-    <section className="container mx-auto lg:mt-10">
+    <section className="w-11/12 lg:w-full mx-auto lg:my-20">
       <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-32">
-        <div className="w-11/12 lg:w-full bg-slate-100 rounded-lg drop-shadow-2xl mx-auto">
+        <div className="w-11/12 lg:w-full bg-slate-100 rounded-lg drop-shadow-2xl mx-auto mt-10 lg:mt-0">
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="card-body lg:px-32 pt-12 lg:pt-32 "
