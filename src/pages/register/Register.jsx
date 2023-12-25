@@ -3,10 +3,8 @@ import login from "../../assets/images/login2.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-// import { AuthContext } from "../../providers/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Helmet } from "react-helmet-async";
-// import Swal from "sweetalert2";
+import useAuth from "../../hooks/useAuth";
 
 const Register = () => {
   const {
@@ -15,24 +13,24 @@ const Register = () => {
     formState: { errors },
   } = useForm();
 
-  // const { createUser, updateUserProfile } = useAuth();
+  const { createUser, updateUserProfile } = useAuth();
   const navigate = useNavigate();
 
   // password show and hide
   const [showPassword, setShowPassword] = useState(false);
 
   const onSubmit = (data) => {
-    // createUser(data.email, data.password).then((result) => {
-    //   const loggedUser = result.user;
-    //   updateUserProfile(data.name, data.photoURL)
-    //     .then(() => {
-    //       const userInfo = {
-    //         name: data.name,
-    //         email: data.email,
-    //       };
-    //     })
-    //     .catch((error) => console.log(error));
-    // });
+    createUser(data.email, data.password).then((result) => {
+      const loggedUser = result.user;
+      updateUserProfile(data.name, data.photoURL)
+        .then(() => {
+          const userInfo = {
+            name: data.name,
+            email: data.email,
+          };
+        })
+        .catch((error) => console.log(error));
+    });
   };
 
   return (
@@ -40,7 +38,7 @@ const Register = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-32">
         <div className="w-11/12 lg:w-full bg-slate-100 rounded-lg drop-shadow-2xl mx-auto">
           <form
-            // onSubmit={handleSubmit(onSubmit)}
+            onSubmit={handleSubmit(onSubmit)}
             className="card-body lg:px-32 pt-12 lg:pt-32 "
           >
             <div className="form-control">

@@ -1,76 +1,78 @@
 import login from "../../assets/images/login2.png";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-
-// import Swal from "sweetalert2";
-
 import { Link, useLocation, useNavigate } from "react-router-dom";
-// import useAuth from "../../hooks/useAuth";
 import { useState } from "react";
+import useAuth from "../../hooks/useAuth";
+import Swal from "sweetalert2";
 
 const Login = () => {
-  //   const { signInUser } = useAuth();
-  //   const navigate = useNavigate();
-  //   const location = useLocation();
+  const { signInUser } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  //   const from = location.state?.form?.pathname || "/";
-  // console.log(
-  //   "state in the location login page",
-  //   location.state?.form?.pathname
-  // );
+  const from = location.state?.form?.pathname || "/";
+  console.log(
+    "state in the location login page",
+    location.state?.form?.pathname
+  );
 
   // password show and hide
   const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = (event) => {
     event.preventDefault();
-    // const form = event.target;F
-    // const email = form.email.value;
-    // const password = form.password.value;
+    const form = event.target;
 
-    // console.log(email, password);
+    const email = form.email.value;
+    const password = form.password.value;
 
-    //     signInUser(email, password)
-    //       .then(() => {
-    //         // const user = result.user;
-    //         // console.log(user);
-    //         //sweetalert
-    //         Swal.fire({
-    //           icon: "success",
-    //           title: "User Successfully Logged In !",
-    //           showClass: {
-    //             popup: "animate_animated animate_fadeInDown",
-    //           },
-    //           hideClass: {
-    //             popup: "animate_animated animate_fadeOutUp",
-    //           },
-    //         });
-    //         event.target.reset();
-    //         navigate(from, { replace: true });
-    //       })
-    //       .catch(() => {
-    //         // console.log(error)
+    console.log(email, password);
 
-    //         //sweetalert
-    //         Swal.fire({
-    //           icon: "error",
-    //           title: "Email and Password Doesn't Match !",
-    //           showClass: {
-    //             popup: "animate_animated animate_fadeInDown",
-    //           },
-    //           hideClass: {
-    //             popup: "animate_animated animate_fadeOutUp",
-    //           },
-    //         });
-    //       });
-    //     event.target.reset();
-    //   };
+    signInUser(email, password)
+      .then(() => {
+        // const user = result.user;
+        // console.log(user);
+        //sweetalert
+        Swal.fire({
+          icon: "success",
+          title: "User Successfully Logged In !",
+          showClass: {
+            popup: "animate_animated animate_fadeInDown",
+          },
+          hideClass: {
+            popup: "animate_animated animate_fadeOutUp",
+          },
+        });
+        event.target.reset();
+        navigate(from, { replace: true });
+      })
+      .catch(() => {
+        // console.log(error)
+
+        //sweetalert
+        Swal.fire({
+          icon: "error",
+          title: "Email and Password Doesn't Match !",
+          showClass: {
+            popup: "animate_animated animate_fadeInDown",
+          },
+          hideClass: {
+            popup: "animate_animated animate_fadeOutUp",
+          },
+        });
+      });
+    event.target.reset();
   };
 
   return (
     <section className="w-11/12 lg:w-full mx-auto lg:my-20">
       <div className="flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-32">
         <div className="my-10 lg:mt-0 w-full">
-          <img className="rounded-lg mx-auto drop-shadow-2xl" src={login} alt="" />
+          <img
+            className="rounded-lg mx-auto drop-shadow-2xl"
+            src={login}
+            alt=""
+          />
         </div>
         <div className="w-full bg-slate-100 rounded-lg drop-shadow-2xl mx-auto mt-10 lg:mt-0">
           <form
