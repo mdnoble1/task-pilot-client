@@ -40,11 +40,11 @@ const Sidebar = () => {
             <>
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="btn btn-ghost btn-circle avatar">
+                  <div className="btn btn-ghost btn-circle avatar">
                     <div className="w-full rounded-full border-2 border-black">
                       <img src={user.photoURL} />
                     </div>
-                  </p>
+                  </div>
                 </div>
                 <div>
                   <span className="block font-semibold text-sm text-center text-black uppercase">

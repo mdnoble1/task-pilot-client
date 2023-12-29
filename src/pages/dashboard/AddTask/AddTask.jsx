@@ -1,73 +1,43 @@
 /* eslint-disable no-unused-vars */
-// import { Link, useNavigate } from "react-router-dom";
-// import { useForm } from "react-hook-form";
-// import { useContext, useState } from "react";
-// import { FaEye, FaEyeSlash } from "react-icons/fa";
-// import useAuth from "../../hooks/useAuth";
-// import { Helmet } from "react-helmet-async";
-// import useAxiosPublic from "../../hooks/useAxiosPublic";
-// import Swal from "sweetalert2";
-// import SocialLogin from "../shared/SocialLogin/SocialLogin";
-// import { useState } from "react";
-// import DateTimePicker from "react-datetime-picker";
-// import "react-datetime-picker/dist/DateTimePicker.css";
-// import "react-calendar/dist/Calendar.css";
-// import "react-clock/dist/Clock.css";
+
+import { useForm } from "react-hook-form";
 
 const AddTask = () => {
-  // const [value, onChange] = useState();
-  // const {
-  //   register,
-  //   handleSubmit,
-  // } = useForm();
+  const { register, handleSubmit } = useForm();
 
-  // // const { createUser, updateUserProfile } = useContext(AuthContext);
-  // const { createUser, updateUserProfile } = useAuth();
-  // const navigate = useNavigate();
-  // const axiosPublic = useAxiosPublic();
+  const onSubmit = (data) => {
+    console.log(data.task_name, data.description, data.schedule, data.priority);
 
-  // // password show and hide
-  // const [showPassword, setShowPassword] = useState(false);
 
-  // const onSubmit = (data) => {
-  //   // console.log(data);
-  //   createUser(data.email, data.password).then((result) => {
-  //     const loggedUser = result.user;
-  //     // console.log(loggedUser);
+    const date = data.schedule.split("T")[0];
+    const time = data.schedule.split("T")[1];
+    console.log(date, time);
 
-  //     updateUserProfile(data.name, data.photoURL)
-  //       .then(() => {
-  //         // console.log("user profile info updated");
-  //         // create user entry in the database
-  //         const userInfo = {
-  //           name: data.name,
-  //           email: data.email,
-  //         };
-  //         axiosPublic.post("/users", userInfo).then((res) => {
-  //           if (res.data.insertedId) {
-  //             // console.log('user added to the database')
-  //             // reset();
-  //             Swal.fire({
-  //               position: "center",
-  //               icon: "success",
-  //               title: "User Created Successfully.",
-  //               showConfirmButton: false,
-  //               timer: 1500,
-  //             });
-  //             navigate("/");
-  //           }
-  //         });
-  //       })
-  //       .catch((error) => console.log(error));
-  //   });
+  };
+
+  // const handleAddTask = (e) => {
+  //   e.preventDefault();
+
+  //   const name = e.target.task_name.value;
+  //   const description = e.target.description.value;
+  //   const schedule = e.target.schedule.value;
+
+  //   // const time = schedule.split("T")
+  //   const date = schedule.split("T")[0];
+  //   const time = schedule.split("T")[1];
+
+  //   const priority = e.target.priority.value;
+
+  //   console.log(name, description, date, time, priority);
   // };
 
   return (
-    <div>
+    <section>
       <div className="lg:flex items-center justify-center lg:gap-32 my-20">
-        <div className="w-10/12 bg-slate-100 rounded-lg drop-shadow-2xl mx-auto">
+        <div className="w-11/12 lg:w-3/4 bg-slate-100 rounded-lg drop-shadow-2xl mx-auto border border-[#13ab94]">
           <form
-            // onSubmit={handleSubmit(onSubmit)}
+            onSubmit={handleSubmit(onSubmit)}
+            // onSubmit={handleAddTask}
             className="card-body lg:px-32 py-12 lg:py-32 "
           >
             <div className="form-control">
@@ -78,9 +48,10 @@ const AddTask = () => {
               </label>
               <input
                 type="text"
-                name="name"
+                name="task_name"
                 placeholder="Name of The Task"
                 className="input rounded focus:border-[#13ab94]"
+                {...register("task_name")}
               />
             </div>
             <div className="form-control">
@@ -89,19 +60,12 @@ const AddTask = () => {
                   Task Details
                 </h2>
                 <textarea
-                  name="message"
+                  name="description"
                   className="textarea textarea-md w-full rounded-md focus:border-[#13ab94]"
+                  {...register("description")}
                 />
               </div>
             </div>
-            {/* <div>
-              <label className="label">
-                <span className="label-text font-semibold text-xl text-[#444]">
-                  Select Schedule
-                </span>
-              </label>
-              <DateTimePicker onChange={onChange} value={value} />
-            </div> */}
             <div className="lg:flex items-center justify-between mx-10">
               <div className="form-control mb-6 lg:mb-0">
                 <label className="label">
@@ -111,9 +75,8 @@ const AddTask = () => {
                 </label>
                 <input
                   type="datetime-local"
-                  name="name"
-                  placeholder="Details of Task"
-                  className="input rounded focus:border-[#13ab94]"
+                  name="schedule"
+                  {...register("schedule")}
                 />
               </div>
               <div className="form-control">
@@ -122,32 +85,35 @@ const AddTask = () => {
                     Select Priority
                   </span>
                 </label>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-4">
                   <input
                     type="radio"
-                    name="name"
-                    placeholder="Details of Task"
-                    className=""
-                  />{" "}
-                  <p className="font-semibold text-lg text-black">High</p>
+                    id="High"
+                    name="priority"
+                    value="High"
+                    {...register("priority")}
+                  />
+                  <label htmlFor="High">High</label>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-4">
                   <input
                     type="radio"
-                    name="name"
-                    placeholder="Details of Task"
-                    className=""
-                  />{" "}
-                  <p className="font-semibold text-lg text-black">Medium</p>
+                    id="Medium"
+                    name="priority"
+                    value="Medium"
+                    {...register("priority")}
+                  />
+                  <label htmlFor="Medium">Medium</label>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-4">
                   <input
                     type="radio"
-                    name="name"
-                    placeholder="Details of Task"
-                    className=""
-                  />{" "}
-                  <p className="font-semibold text-lg text-black">Low</p>
+                    id="Low"
+                    name="priority"
+                    value="Low"
+                    {...register("priority")}
+                  />
+                  <label htmlFor="Low">Low</label>
                 </div>
               </div>
             </div>
@@ -161,7 +127,7 @@ const AddTask = () => {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
