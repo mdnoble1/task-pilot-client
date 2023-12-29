@@ -1,17 +1,56 @@
 /* eslint-disable no-unused-vars */
 
 import { useForm } from "react-hook-form";
+import useAuth from "../../../hooks/useAuth"
+import useAxiosSecure from "../../../hooks/useAxiosSecure"
+import Swal from "sweetalert2";
 
 const AddTask = () => {
   const { register, handleSubmit } = useForm();
+  const { user } = useAuth();
+  const axiosSecure = useAxiosSecure();
 
   const onSubmit = (data) => {
+    // getting the form data 
     console.log(data.task_name, data.description, data.schedule, data.priority);
+    // console.log(user.email)
 
 
     const date = data.schedule.split("T")[0];
     const time = data.schedule.split("T")[1];
-    console.log(date, time);
+    // console.log(date, time);
+
+
+    // creating the object of form data that I need to post in server 
+    const task = {
+      user_email: user.email,
+      task_name: data.task_name,
+      description: data.description,
+      time,
+      date,
+      status: "To Do",
+      priority: data.priority
+    };
+
+    // posting form data in database 
+    axiosSecure.post("/tasks", task)
+      .then((res) => {
+          console.log(res.data);
+          if (res.data.insertedId) {
+             Swal.fire({
+                icon: "success",
+                title: "Task Added Successfully !",
+                showClass: {
+                popup: "animate_animated animate_fadeInDown",
+              },
+                hideClass: {
+                popup: "animate_animated animate_fadeOutUp",
+              },
+        });
+      }
+    });
+
+
 
   };
 
