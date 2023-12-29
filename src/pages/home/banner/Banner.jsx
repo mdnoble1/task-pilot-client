@@ -31,13 +31,13 @@ const Banner = () => {
       >
         <SwiperSlide className="relative">
           <img
-            className="h-full lg:h-[700px] w-full opacity-90 lg:rounded-md"
+            className="h-full lg:h-[700px] w-full opacity-70 lg:rounded-md"
             src={img1}
             alt=""
           />
-          <div className="absolute bottom-[40px] left-[150px] md:bottom-[60px] md:left-[290px] lg:bottom-[140px] lg:left-[650px]">
+          <div className="absolute bottom-[30px] lg:bottom-1/4 w-full text-center">
             <NavLink to="/dashboard">
-              <button className="btn btn-sm md:btn-md lg:btn-lg bg-[#129efc] hover:bg-blue-700 border-0 font-semibold md:text-2xl text-white uppercase drop-shadow-2xl">
+              <button className="btn btn-sm md:btn-md lg:btn-lg bg-[#129efc] hover:bg-blue-700 border-0 font-semibold md:text-2xl text-white uppercase drop-shadow-2xl opacity-100">
                 Let's Explore{" "}
                 <FaRegPaperPlane className="text-lg md:text-2xl"></FaRegPaperPlane>
               </button>
@@ -46,11 +46,11 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide className="relative">
           <img
-            className="h-full lg:h-[700px] w-full opacity-90 lg:rounded-md"
+            className="h-full lg:h-[700px] w-full opacity-70 lg:rounded-md"
             src={img2}
             alt=""
           />
-          <div className="absolute bottom-[40px] left-[150px] md:bottom-[60px] md:left-[290px] lg:bottom-[140px] lg:left-[650px]">
+          <div className="absolute bottom-[30px] lg:bottom-1/4 w-full text-center">
             <NavLink to="/dashboard">
               <button className="btn btn-sm md:btn-md lg:btn-lg bg-[#129efc] hover:bg-blue-700 border-0 font-semibold md:text-2xl text-white uppercase drop-shadow-2xl">
                 Let's Explore{" "}
@@ -61,11 +61,11 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide className="relative">
           <img
-            className="h-full lg:h-[700px] w-full opacity-90 lg:rounded-md"
+            className="h-full lg:h-[700px] w-full opacity-70 lg:rounded-md"
             src={img3}
             alt=""
           />
-          <div className="absolute bottom-[40px] left-[150px] md:bottom-[60px] md:left-[290px] lg:bottom-[140px] lg:left-[650px]">
+          <div className="absolute bottom-[30px] lg:bottom-1/4 w-full text-center">
             <NavLink to="/dashboard">
               <button className="btn btn-sm md:btn-md lg:btn-lg bg-[#129efc] hover:bg-blue-700 border-0 font-semibold md:text-2xl text-white uppercase drop-shadow-2xl">
                 Let's Explore{" "}
@@ -76,11 +76,11 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide className="relative">
           <img
-            className="h-full lg:h-[700px] w-full opacity-90 lg:rounded-md"
+            className="h-full lg:h-[700px] w-full opacity-70 lg:rounded-md"
             src={img4}
             alt=""
           />
-          <div className="absolute bottom-[40px] left-[150px] md:bottom-[60px] md:left-[290px] lg:bottom-[140px] lg:left-[650px]">
+          <div className="absolute bottom-[30px] lg:bottom-1/4 w-full text-center">
             <NavLink to="/dashboard">
               <button className="btn btn-sm md:btn-md lg:btn-lg bg-[#129efc] hover:bg-blue-700 border-0 font-semibold md:text-2xl text-white uppercase drop-shadow-2xl">
                 Let's Explore{" "}
@@ -91,11 +91,11 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide className="relative">
           <img
-            className="h-full lg:h-[700px] w-full opacity-90 lg:rounded-md"
+            className="h-full lg:h-[700px] w-full opacity-70 lg:rounded-md"
             src={img5}
             alt=""
           />
-          <div className="absolute bottom-[40px] left-[150px] md:bottom-[60px] md:left-[290px] lg:bottom-[140px] lg:left-[650px]">
+          <div className="absolute bottom-[30px] lg:bottom-1/4 w-full text-center">
             <NavLink to="/dashboard">
               <button className="btn btn-sm md:btn-md lg:btn-lg bg-[#129efc] hover:bg-blue-700 border-0 font-semibold md:text-2xl text-white uppercase drop-shadow-2xl">
                 Let's Explore{" "}

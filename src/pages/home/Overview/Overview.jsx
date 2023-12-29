@@ -6,8 +6,9 @@ const Overview = () => {
       <div className="hero">
         <div className="hero-content justify-between flex-col w-full lg:flex-row">
           <div className="text-center lg:text-left">
-            <h1 className="text-2xl font-bold text-[#13ab94] w-1/2 mx-auto lg:mx-0">
-              O V E R V I E W
+            <h1 className="text-xl md:text-2xl font-bold text-[#13ab94] w-1/2 mx-auto lg:mx-0 tracking-[8px]
+            md:tracking-[15px]">
+              OVERVIEW
             </h1>
             <h2 className="text-2xl lg:text-3xl font-bold mt-4 lg:mt-10">
               A Little Information About Our TASK PILOT

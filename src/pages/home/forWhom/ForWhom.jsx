@@ -21,7 +21,7 @@ const ForWhom = () => {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 w-11/12 mx-auto my-16">
         {/* card 1 */}
-        <div className="w-96 mx-auto bg-slate-100 py-12 px-4 rounded-lg drop-shadow-2xl border-2 border-white hover:border-2 hover:border-[#13ab94] duration-500">
+        <div className="w-11/12 md:w-96 mx-auto bg-slate-100 py-12 px-4 rounded-lg drop-shadow-2xl border-2 border-white hover:border-2 hover:border-[#13ab94] duration-500">
           <PiStudentBold className="text-6xl mx-auto mb-6"></PiStudentBold>
           <h2 className="font-bold text-xl text-black mb-3">
             Empowering Students and Educators
@@ -49,7 +49,7 @@ const ForWhom = () => {
           </div>
         </div>
         {/* card 2 */}
-        <div className="w-96 mx-auto bg-slate-100 py-12 px-4 rounded-lg drop-shadow-2xl border-2 border-white hover:border-2 hover:border-[#13ab94] duration-500">
+        <div className="w-11/12 md:w-96 mx-auto bg-slate-100 py-12 px-4 rounded-lg drop-shadow-2xl border-2 border-white hover:border-2 hover:border-[#13ab94] duration-500">
           <IoPeopleCircleOutline className="text-6xl mx-auto mb-6"></IoPeopleCircleOutline>
           <h2 className="font-bold text-xl text-black mb-3">
             Elevating Individual Productivity
@@ -77,7 +77,7 @@ const ForWhom = () => {
           </div>
         </div>
         {/* card 3 */}
-        <div className="w-96 mx-auto bg-slate-100 py-12 px-4 rounded-lg drop-shadow-2xl border-2 border-white hover:border-2 hover:border-[#13ab94] duration-500">
+        <div className="w-11/12 md:w-96 mx-auto bg-slate-100 py-12 px-4 rounded-lg drop-shadow-2xl border-2 border-white hover:border-2 hover:border-[#13ab94] duration-500">
           <MdEventAvailable className="text-6xl mx-auto mb-6"></MdEventAvailable>
           <h2 className="font-bold text-xl text-black mb-3">
             Streamlining Event Planning
