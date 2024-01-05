@@ -31,7 +31,7 @@ const TaskSpaceCard = ({ task }) => {
       </div>
 
       <div className="flex items-center justify-between mt-6">
-        <p className="flex items-center gap-2 font-bold text-red-500  text-lg">
+        <p className="flex items-center gap-2 font-bold text-sky-500  text-lg">
           <GrStatusInfo className="text-2xl text-black"></GrStatusInfo> {status}
         </p>
         <p className="flex items-center gap-2 font-bold text-black text-lg">
