@@ -11,7 +11,7 @@ const Dashboard = () => {
       </Helmet>
       <div className="md:grid grid-cols-4">
         <div className="hidden md:block">
-          <Sidebar></Sidebar>
+          <Sidebar className=""></Sidebar>
         </div>
         <div className="col-span-3">
           <div className="md:hidden">

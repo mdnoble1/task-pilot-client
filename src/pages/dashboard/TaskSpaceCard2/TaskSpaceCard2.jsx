@@ -5,6 +5,8 @@ import { FaCalendarAlt, FaFontAwesomeFlag } from "react-icons/fa";
 import { GrStatusInfo } from "react-icons/gr";
 
 const TaskSpaceCard = ({ task }) => {
+  // ONGOING CARD
+
   const { task_name, description, time, date, status, priority } = task || {};
 
   return (

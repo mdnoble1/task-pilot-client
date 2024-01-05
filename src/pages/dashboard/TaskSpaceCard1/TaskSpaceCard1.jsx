@@ -1,14 +1,24 @@
 /* eslint-disable react/prop-types */
-import { MdDriveFileRenameOutline, MdSubtitles } from "react-icons/md";
+import {
+  MdDriveFileRenameOutline,
+  MdSubtitles,
+  MdDeleteForever,
+} from "react-icons/md";
 import { IoMdTimer } from "react-icons/io";
-import { FaCalendarAlt, FaFontAwesomeFlag } from "react-icons/fa";
+import {
+  FaCalendarAlt,
+  FaFontAwesomeFlag,
+  FaHourglassStart,
+} from "react-icons/fa";
 import { GrStatusInfo } from "react-icons/gr";
 
 const TaskSpaceCard = ({ task }) => {
+  // TO DO CARD
+
   const { task_name, description, time, date, status, priority } = task || {};
 
   return (
-    <section className="border-2 border-red-500 rounded-md w-11/12 mx-auto p-4 my-10 cursor-grab">
+    <section className="border-2 border-sky-500 rounded-md w-11/12 mx-auto p-4 my-10 cursor-grab">
       <div>
         <h2 className="flex items-center gap-2 font-bold text-black text-lg mb-2">
           <MdDriveFileRenameOutline className="text-2xl text-black"></MdDriveFileRenameOutline>{" "}
@@ -36,6 +46,14 @@ const TaskSpaceCard = ({ task }) => {
         <p className="flex items-center gap-2 font-bold text-gray-500">
           <FaCalendarAlt className="text-2xl text-black"></FaCalendarAlt> {date}
         </p>
+      </div>
+      <div className="flex items-center justify-between mt-6">
+        <button className="btn btn-outline btn-success uppercase font-semibold text-lg">
+          Start<FaHourglassStart></FaHourglassStart>
+        </button>
+        <button className="btn btn-outline text-red-700 uppercase font-semibold text-lg">
+          Delete <MdDeleteForever className="text-2xl"></MdDeleteForever>
+        </button>
       </div>
     </section>
   );
