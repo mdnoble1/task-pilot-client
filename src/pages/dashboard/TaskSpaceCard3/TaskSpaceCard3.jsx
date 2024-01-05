@@ -7,11 +7,48 @@ import {
 import { IoMdTimer } from "react-icons/io";
 import { FaCalendarAlt, FaFontAwesomeFlag } from "react-icons/fa";
 import { GrStatusInfo } from "react-icons/gr";
+import Swal from "sweetalert2";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
-const TaskSpaceCard = ({ task }) => {
+const TaskSpaceCard = ({ task, refetch }) => {
   // FINISHED TASK
 
-  const { task_name, description, time, date, status, priority } = task || {};
+  const { _id, task_name, description, time, date, status, priority } = task || {};
+
+
+  // deleting a task 
+
+  const handleDeleteTask = ( _id ) => {
+    // console.log(_id)
+
+    Swal.fire({
+      title: "Are You Sure?",
+      text: `You Want To Delete The Task?`,
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, Delete!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        useAxiosSecure.patch(`/tasks/${_id}`).then((res) => {
+          // console.log(res.data);
+          if (res.data.modifiedCount > 0) {
+            refetch();
+
+            Swal.fire({
+              title: "Successful!",
+              text: `Task Deleted Successfully!`,
+              icon: "success",
+            });
+          }
+        });
+      }
+    });
+
+
+
+  }
 
   return (
     <section className="border-2 border-[#13ab94] rounded-md w-11/12 mx-auto p-4 my-10 cursor-grab">
@@ -44,7 +81,7 @@ const TaskSpaceCard = ({ task }) => {
         </p>
       </div>
       <div className="flex items-center justify-end mt-6">
-        <button className="btn btn-outline text-red-700 uppercase font-semibold text-lg">
+        <button onClick={() => handleDeleteTask(_id)} className="btn btn-outline text-red-700 uppercase font-semibold text-lg">
           Delete <MdDeleteForever className="text-2xl"></MdDeleteForever>
         </button>
       </div>
