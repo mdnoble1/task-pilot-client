@@ -13,14 +13,14 @@ const useTasks = () => {
 
 
     // tan stack query 
-    const { data : tasks= [], refetch } = useQuery({
+    const { data : tasks= [], refetch  } = useQuery({
         queryKey: ["task" , user?.email],
         queryFn: async () => {
             const res = await axiosSecure.get(`/tasks?user_email=${user.email}`)
             return res.data;
         }
     });
-    return [ tasks, refetch ];
+    return [ tasks, refetch  ];
 };
  
 export default useTasks;

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import {
   MdDeleteForever,
@@ -9,14 +10,19 @@ import { FaCalendarAlt, FaFontAwesomeFlag } from "react-icons/fa";
 import { GrStatusInfo } from "react-icons/gr";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import useTasks from "../../../hooks/useTasks";
 
 const TaskSpaceCard = ({ task }) => {
   // FINISHED TASK
 
-
   const axiosSecure = useAxiosSecure();
 
+  
+
   const { _id, task_name, description, time, date, status, priority } = task || {};
+
+
+  const [ tasks, refetch ] = useTasks();
 
 
   // deleting a task 
@@ -35,13 +41,15 @@ const TaskSpaceCard = ({ task }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         axiosSecure.delete(`/tasks/${_id}`).then((res) => {
-          // console.log(res.data);
+          console.log(res.data);
           if (res.data.deletedCount > 0) {
             
+            // immediately refetching after deleting 
+            refetch();
 
             Swal.fire({
-              title: "Successful!",
-              text: `Task Deleted Successfully!`,
+              title: "Deleted!",
+              text: "Task Deleted Successfully!",
               icon: "success",
             });
           }

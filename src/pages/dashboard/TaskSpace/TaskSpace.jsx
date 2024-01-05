@@ -4,13 +4,13 @@ import TaskSpaceCard2 from "../TaskSpaceCard2/TaskSpaceCard2";
 import TaskSpaceCard3 from "../TaskSpaceCard3/TaskSpaceCard3";
 
 const TaskSpace = () => {
-  const [ tasks ] = useTasks();
+  const [tasks] = useTasks();
 
   const todoTasks = tasks.filter((item) => item.status === "To Do");
   const ongoingTasks = tasks.filter((item) => item.status === "On Going");
   const completedTasks = tasks.filter((item) => item.status === "Completed");
 
-  // console.log(todoTasks)
+  // console.log(completedTasks)
 
   return (
     <section>
