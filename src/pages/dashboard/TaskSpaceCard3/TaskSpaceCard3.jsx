@@ -10,8 +10,11 @@ import { GrStatusInfo } from "react-icons/gr";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
-const TaskSpaceCard = ({ task, refetch }) => {
+const TaskSpaceCard = ({ task }) => {
   // FINISHED TASK
+
+
+  const axiosSecure = useAxiosSecure();
 
   const { _id, task_name, description, time, date, status, priority } = task || {};
 
@@ -28,13 +31,13 @@ const TaskSpaceCard = ({ task, refetch }) => {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, Delete!",
+      confirmButtonText: "Yes, Delete It!",
     }).then((result) => {
       if (result.isConfirmed) {
-        useAxiosSecure.patch(`/tasks/${_id}`).then((res) => {
+        axiosSecure.delete(`/tasks/${_id}`).then((res) => {
           // console.log(res.data);
-          if (res.data.modifiedCount > 0) {
-            refetch();
+          if (res.data.deletedCount > 0) {
+            
 
             Swal.fire({
               title: "Successful!",

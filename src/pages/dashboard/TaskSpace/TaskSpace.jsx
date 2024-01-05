@@ -4,7 +4,7 @@ import TaskSpaceCard2 from "../TaskSpaceCard2/TaskSpaceCard2";
 import TaskSpaceCard3 from "../TaskSpaceCard3/TaskSpaceCard3";
 
 const TaskSpace = () => {
-  const [ tasks, refetch ] = useTasks();
+  const [ tasks ] = useTasks();
 
   const todoTasks = tasks.filter((item) => item.status === "To Do");
   const ongoingTasks = tasks.filter((item) => item.status === "On Going");
@@ -39,7 +39,7 @@ const TaskSpace = () => {
             Completed
           </h2>
           {completedTasks?.map((task) => (
-            <TaskSpaceCard3 key={task._id} task={task} refetch={refetch}></TaskSpaceCard3>
+            <TaskSpaceCard3 key={task._id} task={task}></TaskSpaceCard3>
           ))}
         </div>
       </div>
