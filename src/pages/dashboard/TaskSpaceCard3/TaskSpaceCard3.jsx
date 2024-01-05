@@ -1,10 +1,16 @@
 /* eslint-disable react/prop-types */
-import { MdDriveFileRenameOutline, MdSubtitles } from "react-icons/md";
+import {
+  MdDeleteForever,
+  MdDriveFileRenameOutline,
+  MdSubtitles,
+} from "react-icons/md";
 import { IoMdTimer } from "react-icons/io";
 import { FaCalendarAlt, FaFontAwesomeFlag } from "react-icons/fa";
 import { GrStatusInfo } from "react-icons/gr";
 
 const TaskSpaceCard = ({ task }) => {
+  // FINISHED TASK
+
   const { task_name, description, time, date, status, priority } = task || {};
 
   return (
@@ -36,6 +42,11 @@ const TaskSpaceCard = ({ task }) => {
         <p className="flex items-center gap-2 font-bold text-gray-500">
           <FaCalendarAlt className="text-2xl text-black"></FaCalendarAlt> {date}
         </p>
+      </div>
+      <div className="flex items-center justify-end mt-6">
+        <button className="btn btn-outline text-red-700 uppercase font-semibold text-lg">
+          Delete <MdDeleteForever className="text-2xl"></MdDeleteForever>
+        </button>
       </div>
     </section>
   );
