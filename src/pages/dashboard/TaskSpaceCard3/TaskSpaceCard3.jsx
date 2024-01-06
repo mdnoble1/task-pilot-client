@@ -23,10 +23,10 @@ const TaskSpaceCard = ({ task }) => {
           <MdDriveFileRenameOutline className="text-2xl text-black"></MdDriveFileRenameOutline>{" "}
           {task_name}
         </h2>
-        <p className="flex items-center gap-2 font-bold text-gray-500">
-          <MdSubtitles className="text-2xl text-black"></MdSubtitles>{" "}
-          {description}
-        </p>
+        <div className="flex items-start gap-2">
+          <MdSubtitles className="w-10 text-2xl text-black"></MdSubtitles>
+          <p className="font-bold text-gray-500">{description}</p>
+        </div>
       </div>
 
       <div className="flex items-center justify-between mt-6">

@@ -16,13 +16,15 @@ const TaskSpace = () => {
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-3 w-11/12 mx-auto my-16">
         {/* to do  */}
-        <div>
-          <h2 className="font-bold text-3xl text-gray-500 text-center uppercase">
+        <div className="border-2 border-gray-700 rounded-t-lg">
+          <h2 className="font-bold text-3xl text-gray-500 text-center uppercase mt-6">
             To Do
           </h2>
-          {todoTasks?.map((task) => (
-            <TaskSpaceCard1 key={task._id} task={task}></TaskSpaceCard1>
-          ))}
+          <div>
+            {todoTasks?.map((task) => (
+              <TaskSpaceCard1 key={task._id} task={task}></TaskSpaceCard1>
+            ))}
+          </div>
         </div>
         {/* on going  */}
         <div>

@@ -1,8 +1,5 @@
 /* eslint-disable react/prop-types */
-import {
-  MdDriveFileRenameOutline,
-  MdSubtitles,
-} from "react-icons/md";
+import { MdDriveFileRenameOutline, MdSubtitles } from "react-icons/md";
 import { IoMdTimer } from "react-icons/io";
 import {
   FaCalendarAlt,
@@ -15,7 +12,8 @@ import DeleteTaskButton from "../../../components/deleteTaskButton";
 const TaskSpaceCard = ({ task }) => {
   // TO DO CARD
 
-  const { _id, task_name, description, time, date, status, priority } = task || {};
+  const { _id, task_name, description, time, date, status, priority } =
+    task || {};
 
   return (
     <section className="border-2 border-sky-500 rounded-md w-11/12 mx-auto p-4 my-10 cursor-grab">
@@ -24,10 +22,10 @@ const TaskSpaceCard = ({ task }) => {
           <MdDriveFileRenameOutline className="text-2xl text-black"></MdDriveFileRenameOutline>{" "}
           {task_name}
         </h2>
-        <p className="flex items-center gap-2 font-bold text-gray-500">
-          <MdSubtitles className="text-2xl text-black"></MdSubtitles>{" "}
-          {description}
-        </p>
+        <div className="flex items-start gap-2">
+          <MdSubtitles className="w-10 text-2xl text-black"></MdSubtitles>
+          <p className="font-bold text-gray-500">{description}</p>
+        </div>
       </div>
 
       <div className="flex items-center justify-between mt-6">
