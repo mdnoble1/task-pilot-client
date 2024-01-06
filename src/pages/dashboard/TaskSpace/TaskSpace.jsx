@@ -14,9 +14,9 @@ const TaskSpace = () => {
 
   return (
     <section>
-      <div className="grid grid-cols-1 lg:grid-cols-3 w-11/12 mx-auto my-16">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 w-11/12 mx-auto my-16">
         {/* to do  */}
-        <div className="border-2 border-gray-700 rounded-t-lg">
+        <div className="border-2 border-gray-700 rounded-t-lg h-[800px] overflow-y-scroll">
           <h2 className="font-bold text-3xl text-gray-500 text-center uppercase mt-6">
             To Do
           </h2>
@@ -27,22 +27,26 @@ const TaskSpace = () => {
           </div>
         </div>
         {/* on going  */}
-        <div>
-          <h2 className="font-bold text-3xl text-gray-500 text-center uppercase">
+        <div className="border-2 border-gray-700 rounded-t-lg h-[800px] overflow-y-scroll">
+          <h2 className="font-bold text-3xl text-gray-500 text-center uppercase mt-6">
             On GOing
           </h2>
-          {ongoingTasks?.map((task) => (
-            <TaskSpaceCard2 key={task._id} task={task}></TaskSpaceCard2>
-          ))}
+          <div>
+            {ongoingTasks?.map((task) => (
+              <TaskSpaceCard2 key={task._id} task={task}></TaskSpaceCard2>
+            ))}
+          </div>
         </div>
         {/* completed  */}
-        <div>
-          <h2 className="font-bold text-3xl text-gray-500 text-center uppercase">
+        <div className="border-2 border-gray-700 rounded-t-lg h-[800px] overflow-y-scroll">
+          <h2 className="font-bold text-3xl text-gray-500 text-center uppercase mt-6">
             Completed
           </h2>
-          {completedTasks?.map((task) => (
-            <TaskSpaceCard3 key={task._id} task={task}></TaskSpaceCard3>
-          ))}
+          <div>
+            {completedTasks?.map((task) => (
+              <TaskSpaceCard3 key={task._id} task={task}></TaskSpaceCard3>
+            ))}
+          </div>
         </div>
       </div>
     </section>
