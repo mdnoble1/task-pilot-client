@@ -5,14 +5,12 @@ import Swal from "sweetalert2";
 import useAxiosSecure from "../hooks/useAxiosSecure";
 import useTasks from "../hooks/useTasks";
 
-const DeleteTaskButton = ( { _id } ) => {
-
-    const axiosSecure = useAxiosSecure();
+const DeleteTaskButton = ({ _id }) => {
+  const axiosSecure = useAxiosSecure();
 
   const [tasks, refetch] = useTasks();
 
-
-    // deleting a task
+  // deleting a task
   const handleDeleteTask = (_id) => {
     Swal.fire({
       title: "Are You Sure?",
@@ -40,8 +38,6 @@ const DeleteTaskButton = ( { _id } ) => {
       }
     });
   };
-
-
 
   return (
     <div>

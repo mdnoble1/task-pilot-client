@@ -2,7 +2,6 @@
 import {
   MdDriveFileRenameOutline,
   MdSubtitles,
-  MdDeleteForever,
 } from "react-icons/md";
 import { IoMdTimer } from "react-icons/io";
 import {
@@ -11,11 +10,12 @@ import {
   FaHourglassStart,
 } from "react-icons/fa";
 import { GrStatusInfo } from "react-icons/gr";
+import DeleteTaskButton from "../../../components/deleteTaskButton";
 
 const TaskSpaceCard = ({ task }) => {
   // TO DO CARD
 
-  const { task_name, description, time, date, status, priority } = task || {};
+  const { _id, task_name, description, time, date, status, priority } = task || {};
 
   return (
     <section className="border-2 border-sky-500 rounded-md w-11/12 mx-auto p-4 my-10 cursor-grab">
@@ -51,9 +51,7 @@ const TaskSpaceCard = ({ task }) => {
         <button className="btn btn-outline btn-success uppercase font-semibold text-lg">
           Start<FaHourglassStart></FaHourglassStart>
         </button>
-        <button className="btn btn-outline text-red-700 uppercase font-semibold text-lg">
-          Delete <MdDeleteForever className="text-2xl"></MdDeleteForever>
-        </button>
+        <DeleteTaskButton _id={_id}></DeleteTaskButton>
       </div>
     </section>
   );
