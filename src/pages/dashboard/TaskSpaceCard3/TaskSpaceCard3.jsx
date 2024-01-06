@@ -8,58 +8,13 @@ import {
 import { IoMdTimer } from "react-icons/io";
 import { FaCalendarAlt, FaFontAwesomeFlag } from "react-icons/fa";
 import { GrStatusInfo } from "react-icons/gr";
-import Swal from "sweetalert2";
-import useAxiosSecure from "../../../hooks/useAxiosSecure";
-import useTasks from "../../../hooks/useTasks";
+import DeleteTaskButton from "../../../components/deleteTaskButton";
 
 const TaskSpaceCard = ({ task }) => {
-  // FINISHED TASK
+  // COMPLETED TASK
 
-  const axiosSecure = useAxiosSecure();
-
-  
-
-  const { _id, task_name, description, time, date, status, priority } = task || {};
-
-
-  const [ tasks, refetch ] = useTasks();
-
-
-  // deleting a task 
-
-  const handleDeleteTask = ( _id ) => {
-    // console.log(_id)
-
-    Swal.fire({
-      title: "Are You Sure?",
-      text: `You Want To Delete The Task?`,
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, Delete It!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        axiosSecure.delete(`/tasks/${_id}`).then((res) => {
-          console.log(res.data);
-          if (res.data.deletedCount > 0) {
-            
-            // immediately refetching after deleting 
-            refetch();
-
-            Swal.fire({
-              title: "Deleted!",
-              text: "Task Deleted Successfully!",
-              icon: "success",
-            });
-          }
-        });
-      }
-    });
-
-
-
-  }
+  const { _id, task_name, description, time, date, status, priority } =
+    task || {};
 
   return (
     <section className="border-2 border-[#13ab94] rounded-md w-11/12 mx-auto p-4 my-10 cursor-grab">
@@ -92,9 +47,7 @@ const TaskSpaceCard = ({ task }) => {
         </p>
       </div>
       <div className="flex items-center justify-end mt-6">
-        <button onClick={() => handleDeleteTask(_id)} className="btn btn-outline text-red-700 uppercase font-semibold text-lg">
-          Delete <MdDeleteForever className="text-2xl"></MdDeleteForever>
-        </button>
+        <DeleteTaskButton _id={_id}></DeleteTaskButton>
       </div>
     </section>
   );
