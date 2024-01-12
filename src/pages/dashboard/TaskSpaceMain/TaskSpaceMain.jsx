@@ -1,6 +1,8 @@
+/* eslint-disable react/prop-types */
 import useTasks from "../../../hooks/useTasks";
 
-const TaskSpaceMain = () => {
+const TaskSpaceMain = ({ status }) => {
+    
 
     // loading all tasks 
     const [tasks] = useTasks();
@@ -10,13 +12,25 @@ const TaskSpaceMain = () => {
     const ongoingTasks = tasks.filter((item) => item.status === "On Going");
     const completedTasks = tasks.filter((item) => item.status === "Completed");
 
-    console.log(completedTasks)
+    // console.log(completedTasks)
+    // console.log(tasks)
+    // console.log(status)
 
 
+    let text = "to do";
+    let bg = "bg-slate-500";
+    let tasksToMap = todoTasks;
+
+    if(status === "ongoing"){
+        text = "ongoing"
+    }
+    if(status === "completed"){
+        text = "completed"
+    }
 
     return (
         <section>
-            TAsk space
+            <h2>{text}</h2>
         </section>
     );
 };
