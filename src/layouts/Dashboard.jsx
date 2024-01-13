@@ -9,11 +9,11 @@ const Dashboard = () => {
       <Helmet>
         <title>Task Pilot | Dashboard</title>
       </Helmet>
-      <div className="md:grid grid-cols-4">
+      <div className="md:grid grid-cols-5">
         <div className="hidden md:block">
-          <Sidebar className=""></Sidebar>
+          <Sidebar></Sidebar>
         </div>
-        <div className="col-span-3">
+        <div className="col-span-4">
           <div className="md:hidden">
             <Topbar></Topbar>
           </div>
