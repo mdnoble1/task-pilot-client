@@ -33,7 +33,7 @@ const TaskSpaceMain = ({ status }) => {
   return (
     <section className={`rounded-md p-2`}>
       <h2
-        className={`font-bold text-xl uppercase ${bg} w-72 h-16 flex items-center justify-center rounded-md`}
+        className={`font-bold text-xl uppercase ${bg} w-full h-16 flex items-center justify-center rounded-md`}
       >
         {text}
         <span className="ml-4 bg-white rounded-full px-3 py-1 text-2xl font-bold">

@@ -5,7 +5,7 @@ const TaskSpaceList = () => {
   const statuses = ["todo", "ongoing", "completed"];
 
   return (
-    <section className="flex justify-center gap-16">
+    <section className="grid grid-cols-3 w-11/12 mx-auto justify-center gap-10 my-16">
       {statuses.map((status, index) => (
         <TaskSpaceMain key={index} status={status}></TaskSpaceMain>
       ))}
