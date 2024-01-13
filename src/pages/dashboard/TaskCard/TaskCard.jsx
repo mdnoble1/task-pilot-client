@@ -1,11 +1,10 @@
 /* eslint-disable react/prop-types */
 import {
   MdDeleteForever,
-  MdDriveFileRenameOutline,
   MdSubtitles,
 } from "react-icons/md";
 import { SiTask } from "react-icons/si";
-import { FaCalendarAlt, FaEdit, FaFontAwesomeFlag } from "react-icons/fa";
+import { FaCalendarAlt, FaFontAwesomeFlag } from "react-icons/fa";
 import { IoMdTimer } from "react-icons/io";
 
 const TaskCard = ({ task }) => {

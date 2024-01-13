@@ -33,10 +33,10 @@ const TaskSpaceMain = ({ status }) => {
   return (
     <section className={`rounded-md p-2`}>
       <h2
-        className={`font-bold text-xl uppercase ${bg} w-full h-16 flex items-center justify-center rounded-md`}
+        className={`font-bold text-xs md:text-sm lg:text-xl uppercase ${bg} w-full flex items-center justify-between rounded-md px-2 lg:px-8 py-2 lg:py-4`}
       >
         {text}
-        <span className="ml-4 bg-white rounded-full px-3 py-1 text-2xl font-bold">
+        <span className="bg-white rounded-full px-2 lg:px-3 lg:py-1 text-sm md:text-base lg:text-2xl font-bold">
           {tasksToMap.length}
         </span>
       </h2>
