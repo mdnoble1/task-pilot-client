@@ -32,14 +32,16 @@ const TaskSpaceMain = ({ status }) => {
 
   return (
     <section className={`rounded-md p-2`}>
-      <h2
-        className={`font-bold text-xs md:text-sm lg:text-xl uppercase ${bg} w-full flex items-center justify-between rounded-md px-2 lg:px-8 py-2 lg:py-4`}
-      >
-        {text}
-        <span className="bg-white rounded-full px-2 lg:px-3 lg:py-1 text-sm md:text-base lg:text-2xl font-bold">
+      <div className={`${bg} w-10/12 text-center lg:flex items-center justify-between rounded-md px-1 lg:px-4 py-3 lg:py-5`}>
+        <h2
+          className={`font-bold text-sm lg:text-lg uppercase `}
+        >
+          {text}
+        </h2>
+        <h2 className="bg-white rounded-full mx-auto lg:mx-0 w-6 h-6 md:w-8 md:h-8 text-sm md:text-base lg:text-lg font-bold mt-2 lg:mt-0">
           {tasksToMap.length}
-        </span>
-      </h2>
+        </h2>
+      </div>
       <div>
         {tasksToMap.length > 0 &&
           tasksToMap.map((task) => (
