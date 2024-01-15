@@ -20,7 +20,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="md:w-48 lg:w-[300px] bg-[#13ab94] flex justify-center fixed h-screen">
+    <div className="md:w-56 lg:w-[320px] bg-[#13ab94] flex justify-center fixed h-screen">
       <ul className="mt-6 lg:mt-12">
         <div className="text-black mb-10 lg:mb-20">
           <NavLink to="/">
