@@ -14,7 +14,7 @@ const TaskCard = ({ task }) => {
     }),
   }));
 
-  console.log(isDragging);
+  // console.log(isDragging);
 
   return (
     <section className="my-4">

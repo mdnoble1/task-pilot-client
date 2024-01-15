@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { useDrop } from "react-dnd";
 import useTasks from "../../../hooks/useTasks";
 import TaskCard from "../TaskCard/TaskCard";
 
@@ -15,6 +16,15 @@ const TaskSpaceMain = ({ status }) => {
   // console.log(tasks)
   // console.log(status)
 
+  // react dnd dropping a card
+  const [{ isOver }, drop] = useDrop(() => ({
+    accept: "task",
+    drop: (item) => addItemToCard(item.id),
+    collect: (monitor) => ({
+      isOver: !!monitor.isOver(),
+    }),
+  }));
+
   let text = "to do";
   let bg = "bg-sky-400";
   let tasksToMap = todoTasks;
@@ -30,8 +40,13 @@ const TaskSpaceMain = ({ status }) => {
     tasksToMap = completedTasks;
   }
 
+
+  const addItemToCard = (id) => {
+    console.log("dropping", id, status)
+  }
+
   return (
-    <section className={`rounded-md p-2 mx-auto w-full`}>
+    <section ref={drop} className={`rounded-md p-2 mx-auto w-full`}>
       <div
         className={`${bg} w-11/12 text-center lg:flex items-center justify-between mx-auto rounded-md px-1 lg:px-4 py-3 lg:py-5`}
       >
