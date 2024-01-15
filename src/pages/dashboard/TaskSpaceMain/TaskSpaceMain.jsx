@@ -46,7 +46,7 @@ const TaskSpaceMain = ({ status }) => {
   }
 
   return (
-    <section ref={drop} className={`rounded-md p-2 mx-auto w-full`}>
+    <section ref={drop} className={`rounded-lg px-2 py-4 mx-auto w-full ${isOver ? "bg-slate-100" : ""} duration-700`}>
       <div
         className={`${bg} w-11/12 text-center lg:flex items-center justify-between mx-auto rounded-md px-1 lg:px-4 py-3 lg:py-5`}
       >
