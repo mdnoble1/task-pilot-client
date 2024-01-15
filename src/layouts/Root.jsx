@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../pages/home/shared/Navbar/Navbar";
 import Sidebar from "../pages/home/shared/Sidebar/Sidebar";
-import { Toaster } from "react-hot-toast";
 
 const Root = () => {
   return (
@@ -17,7 +16,6 @@ const Root = () => {
         {/* sidebar  */}
         <Sidebar></Sidebar>
       </div>
-      <Toaster/>
     </section>
   );
 };
