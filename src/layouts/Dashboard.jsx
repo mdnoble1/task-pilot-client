@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Outlet } from "react-router-dom";
 import Sidebar from "../pages/dashboard/shared/Sidebar/Sidebar";
 import Topbar from "../pages/dashboard/shared/Topbar/Topbar";
+import { Toaster } from "react-hot-toast";
 
 const Dashboard = () => {
   return (
@@ -22,6 +23,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      <Toaster position="top-right" />
     </section>
   );
 };

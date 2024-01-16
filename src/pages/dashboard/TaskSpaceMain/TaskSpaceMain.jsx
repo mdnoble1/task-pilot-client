@@ -3,7 +3,7 @@ import { useDrop } from "react-dnd";
 import useTasks from "../../../hooks/useTasks";
 import TaskCard from "../TaskCard/TaskCard";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
-import Swal from "sweetalert2";
+import toast from "react-hot-toast";
 
 const TaskSpaceMain = ({ status }) => {
   const axiosSecure = useAxiosSecure();
@@ -60,11 +60,15 @@ const TaskSpaceMain = ({ status }) => {
         refetch();
         // console.log(tasks)
 
-        Swal.fire({
-          position: "top-end",
-          title: "Successful!",
-          text: `Task Status Updated Successfully`,
-          icon: "success",
+        toast.success("Task Status Updated!", {
+          style: {
+            border: "1px solid #13ab94",
+            padding: "16px",
+            color: "#000000",
+          },
+          iconTheme: {
+            primary: "#13ab94",
+          },
         });
       }
     });
