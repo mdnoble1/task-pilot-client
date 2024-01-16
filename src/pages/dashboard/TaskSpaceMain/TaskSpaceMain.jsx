@@ -47,7 +47,7 @@ const TaskSpaceMain = ({ status }) => {
   }
 
   const addItemToCard = (id) => {
-    console.log("dropping", id, status);
+    // console.log("dropping", id, status);
 
     const taskStatus = {
       stat: `${status}`,
