@@ -2,7 +2,7 @@ import TaskSpaceMain from "../TaskSpaceMain/TaskSpaceMain";
 
 const TaskSpaceList = () => {
   // task category listing
-  const statuses = ["todo", "ongoing", "completed"];
+  const statuses = ["To Do", "On Going", "Completed"];
 
   return (
     <section className="grid grid-cols-3 md:w-9/12 mx-auto my-8 lg:my-20">

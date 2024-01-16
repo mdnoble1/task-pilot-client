@@ -2,17 +2,23 @@
 import { useDrop } from "react-dnd";
 import useTasks from "../../../hooks/useTasks";
 import TaskCard from "../TaskCard/TaskCard";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import Swal from "sweetalert2";
 
 const TaskSpaceMain = ({ status }) => {
+  const axiosSecure = useAxiosSecure();
+
   // loading all tasks
-  const [tasks] = useTasks();
+  const [tasks, refetch] = useTasks();
+
+  // console.log(tasks[14])
 
   // filtering task by status
   const todoTasks = tasks.filter((item) => item.status === "To Do");
   const ongoingTasks = tasks.filter((item) => item.status === "On Going");
   const completedTasks = tasks.filter((item) => item.status === "Completed");
 
-  // console.log(completedTasks)
+  // console.log(ongoingTasks)
   // console.log(tasks)
   // console.log(status)
 
@@ -25,28 +31,52 @@ const TaskSpaceMain = ({ status }) => {
     }),
   }));
 
-  let text = "to do";
+  let text = "To Do";
   let bg = "bg-sky-400";
   let tasksToMap = todoTasks;
 
-  if (status === "ongoing") {
-    text = "ongoing";
+  if (status === "On Going") {
+    text = "On Going";
     bg = "bg-yellow-400";
     tasksToMap = ongoingTasks;
   }
-  if (status === "completed") {
-    text = "completed";
+  if (status === "Completed") {
+    text = "Completed";
     bg = "bg-green-500";
     tasksToMap = completedTasks;
   }
 
-
   const addItemToCard = (id) => {
-    console.log("dropping", id, status)
-  }
+    console.log("dropping", id, status);
+
+    const taskStatus = {
+      stat: `${status}`,
+    };
+
+    axiosSecure.patch(`/tasks/${id}`, taskStatus).then((res) => {
+      console.log(res.data);
+
+      if (res.data.modifiedCount > 0) {
+        refetch();
+        // console.log(tasks)
+
+        Swal.fire({
+          position: "top-end",
+          title: "Successful!",
+          text: `Task Status Updated Successfully`,
+          icon: "success",
+        });
+      }
+    });
+  };
 
   return (
-    <section ref={drop} className={`rounded-lg px-2 py-4 mx-auto w-full ${isOver ? "bg-slate-100" : ""} duration-700`}>
+    <section
+      ref={drop}
+      className={`rounded-lg px-2 py-4 mx-auto w-full ${
+        isOver ? "bg-slate-100" : ""
+      } duration-700`}
+    >
       <div
         className={`${bg} w-11/12 text-center lg:flex items-center justify-between mx-auto rounded-md px-1 lg:px-4 py-3 lg:py-5`}
       >
