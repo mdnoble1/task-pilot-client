@@ -54,7 +54,7 @@ const TaskSpaceMain = ({ status }) => {
     };
 
     axiosSecure.patch(`/tasks/${id}`, taskStatus).then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
 
       if (res.data.modifiedCount > 0) {
         refetch();
@@ -92,7 +92,7 @@ const TaskSpaceMain = ({ status }) => {
       <div>
         {tasksToMap.length > 0 &&
           tasksToMap.map((task) => (
-            <TaskCard key={task._id} task={task}></TaskCard>
+            <TaskCard key={task._id} task={task} status={status}></TaskCard>
           ))}
       </div>
     </section>
