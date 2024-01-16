@@ -43,7 +43,7 @@ const Register = () => {
         <title>Task Pilot | Register</title>
       </Helmet>
       <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-32">
-        <div className="w-11/12 lg:w-full bg-slate-100 rounded-lg drop-shadow-2xl mx-auto mt-10 lg:mt-0">
+        <div className="w-full bg-slate-100 rounded-lg drop-shadow-2xl mx-auto mt-10 lg:mt-0">
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="card-body lg:px-32 pt-12 lg:pt-32 "
