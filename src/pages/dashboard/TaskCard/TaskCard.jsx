@@ -2,6 +2,7 @@
 import { useDrag } from "react-dnd";
 import DeleteTaskButton from "../../../components/deleteTaskButton";
 import UpdateTaskButton from "../../../components/UpdateTaskButton";
+import ShowDetailButton from "../../../components/ShowDetailButton";
 
 const TaskCard = ({ task, status }) => {
   const { _id, task_name } = task || {};
@@ -26,11 +27,14 @@ const TaskCard = ({ task, status }) => {
           isDragging ? "opacity-40" : "opacity-100"
         } duration-400 hidden lg:block`}
       >
-        <div className="lg:flex items-center justify-between w-11/12 h-32 md:h-36 lg:h-24 mx-auto text-center lg:text-left">
+        <div className="lg:flex items-center justify-between w-11/12 h-32 md:h-36 lg:h-28 mx-auto text-center lg:text-left">
           <h2 className="font-bold text-black text-sm md:text-lg mb-2 h-16 md:h-20 flex lg:items-center mt-4 lg:mt-0">
             {task_name}
           </h2>
+          <div>
+          <ShowDetailButton _id={_id}></ShowDetailButton>
           <DeleteTaskButton _id={_id}></DeleteTaskButton>
+          </div>
         </div>
       </div>
       {/* for small devices  */}

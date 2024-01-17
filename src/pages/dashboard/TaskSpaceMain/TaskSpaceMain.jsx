@@ -4,8 +4,6 @@ import useTasks from "../../../hooks/useTasks";
 import TaskCard from "../TaskCard/TaskCard";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import toast from "react-hot-toast";
-import { TbInfoTriangle } from "react-icons/tb";
-import { Link } from "react-router-dom";
 
 const TaskSpaceMain = ({ status }) => {
   const axiosSecure = useAxiosSecure();
@@ -36,19 +34,19 @@ const TaskSpaceMain = ({ status }) => {
   let text = "To Do";
   let bg = "bg-sky-400";
   let tasksToMap = todoTasks;
-  let goTo = "todoTask"
+  // let goTo = "todoTask";
 
   if (status === "On Going") {
     text = "On Going";
     bg = "bg-yellow-400";
     tasksToMap = ongoingTasks;
-    goTo = "ongoingTask"
+    // goTo = "ongoingTask";
   }
   if (status === "Completed") {
     text = "Completed";
     bg = "bg-green-500";
     tasksToMap = completedTasks;
-    goTo = "completedTask"
+    // goTo = "completedTask";
   }
 
   const addItemToCard = (id) => {
@@ -90,16 +88,12 @@ const TaskSpaceMain = ({ status }) => {
         className={`${bg} w-11/12 text-center lg:flex items-center justify-between mx-auto rounded-md px-2 py-3 lg:py-5`}
       >
         <h2 className={`font-bold text-sm lg:text-lg uppercase`}>{text}</h2>
-        <div className="flex items-center justify-center mt-2 lg:mt-0 gap-1">
-          <h2 className="bg-white rounded-full mx-auto lg:mx-0 w-6 h-6 md:w-8 md:h-8 text-sm md:text-base lg:text-lg font-bold">
+        
+          <h2 className="bg-white rounded-full mx-auto lg:mx-0 w-6 h-6 md:w-8 md:h-8 text-sm md:text-base lg:text-lg font-bold mt-2 lg:mt-0">
             {tasksToMap.length}
           </h2>
-          <a href={`${goTo}`}>
-            <button className="text-2xl md:text-3xl text-black btn btn-ghost btn-circle mr-0 lg:mr-2 mt-1">
-              <TbInfoTriangle></TbInfoTriangle>
-            </button>
-          </a>
-        </div>
+          
+        
       </div>
       <div>
         {tasksToMap.length > 0 &&

@@ -72,7 +72,7 @@ const AddTask = () => {
   return (
     <section>
       <div className="lg:flex items-center justify-center lg:gap-32 my-20">
-        <div className="w-11/12 lg:w-3/4 bg-slate-100 rounded-lg drop-shadow-2xl mx-auto border border-[#13ab94]">
+        <div className="w-11/12 md:w-3/4 bg-slate-100 rounded-lg drop-shadow-2xl mx-auto border border-[#13ab94]">
           <form
             onSubmit={handleSubmit(onSubmit)}
             // onSubmit={handleAddTask}
