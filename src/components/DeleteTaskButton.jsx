@@ -40,14 +40,14 @@ const DeleteTaskButton = ({ _id }) => {
   };
 
   return (
-    <div>
+    <section>
       <button
         onClick={() => handleDeleteTask(_id)}
-        className="font-bold text-4xl text-red-600 btn btn-ghost btn-circle mb-4 lg:mb-0"
+        className="font-bold text-2xl lg:text-3xl lg:btn"
       >
-        <MdDeleteForever></MdDeleteForever>
+        <MdDeleteForever className="text-red-600"></MdDeleteForever>
       </button>
-    </div>
+    </section>
   );
 };
 

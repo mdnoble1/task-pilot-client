@@ -13,7 +13,7 @@ const ShowDetailButton = ({ _id }) => {
   const modalId = `my_modal_${_id}`;
 
   const handleShowDetail = (_id) => {
-    // console.log(_id);
+    console.log(_id);
 
     const selectedTask = tasks.find((item) => item._id == _id);
     // console.log(selectedTask);
@@ -33,12 +33,12 @@ const ShowDetailButton = ({ _id }) => {
     <section>
       <button
         onClick={() => handleShowDetail(_id)}
-        className="text-2xl md:text-3xl text-black btn btn-ghost btn-circle"
+        className="text-xl lg:text-3xl text-black lg:btn"
       >
         <TbInfoTriangle></TbInfoTriangle>
       </button>
 
-      <dialog id={modalId} className="modal modal-bottom sm:modal-middle">
+      <dialog id={modalId} className="modal modal-bottom md:modal-middle">
         <TaskDetailModal modalTask={modalTask}></TaskDetailModal>
       </dialog>
     </section>

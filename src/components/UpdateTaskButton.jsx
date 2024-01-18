@@ -51,14 +51,14 @@ const UpdateTaskButton = ({ id, status }) => {
   };
 
   return (
-    <div>
+    <section>
       <button
         onClick={() => handleUpdateTask(id)}
-        className="font-bold text-2xl md:text-3xl text-[#13ab94] btn btn-ghost btn-circle mb-4 lg:mb-0"
+        className="font-bold text-xl lg:text-3xl lg:btn"
       >
-        <BsRocketTakeoffFill></BsRocketTakeoffFill>
+        <BsRocketTakeoffFill className="text-[#13ab94]"></BsRocketTakeoffFill>
       </button>
-    </div>
+    </section>
   );
 };
 
