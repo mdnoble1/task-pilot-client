@@ -1,8 +1,25 @@
-# React + Vite
+# Live link: https://task-pilot-44386.web.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+### Website Name: Task Pilot
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Feature and Functionality: 
+       -	Users can add tasks.
+       -	Users can update status of a task by Drag and Drop.
+       -	Users can assign tasks with time, date and priority.
+       -	Dashboard layout to view and track tasks.
+       -	Authentication with Google, Email, and Password.
+
+### Technology: 
+       - React Drag and Drop            - Firebase 
+       - TanStack Query                 - Node JS
+       - Axios                          - Express JS
+       - React Hook Form                - MongoDB
+       - React Router                   - Tailwind CSS  
+       - Swiper JS                      - Daisy UI
+       - Sweetalert2                       
+                              
+                              
+                                        
+                                
+       
