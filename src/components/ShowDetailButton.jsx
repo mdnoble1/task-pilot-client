@@ -3,6 +3,8 @@
 import { TbInfoTriangle } from "react-icons/tb";
 import useTasks from "../hooks/useTasks";
 import { useState } from "react";
+import TaskDetailModal from "../pages/dashboard/TaskDetailModal/TaskDetailModal";
+
 
 const ShowDetailButton = ({ _id }) => {
   const [modalTask, setModalTask] = useState({});
@@ -18,9 +20,9 @@ const ShowDetailButton = ({ _id }) => {
 
     setModalTask(selectedTask);
 
-    const modal = document.getElementById(modalId)
+    const modal = document.getElementById(modalId);
 
-    if(modal) {
+    if (modal) {
       modal.showModal();
     }
   };
@@ -37,18 +39,7 @@ const ShowDetailButton = ({ _id }) => {
       </button>
 
       <dialog id={modalId} className="modal modal-bottom sm:modal-middle">
-        <div className="modal-box">
-          <h3 className="font-bold text-lg">{modalTask.task_name}</h3>
-          <p className="py-4">
-            {modalTask.description}
-          </p>
-          <div className="modal-action">
-            <form method="dialog">
-              {/* if there is a button in form, it will close the modal */}
-              <button className="btn">Close</button>
-            </form>
-          </div>
-        </div>
+        <TaskDetailModal modalTask={modalTask}></TaskDetailModal>
       </dialog>
     </section>
   );
