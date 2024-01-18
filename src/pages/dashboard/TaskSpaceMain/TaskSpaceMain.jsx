@@ -85,7 +85,7 @@ const TaskSpaceMain = ({ status }) => {
       } duration-700`}
     >
       <div
-        className={`${bg} w-11/12 text-center lg:flex items-center justify-between mx-auto rounded-md px-2 py-3 lg:py-5`}
+        className={`${bg} w-11/12 text-center lg:flex items-center justify-between mx-auto rounded-md px-2 lg:px-4 py-3 lg:py-5`}
       >
         <h2 className={`font-bold text-sm lg:text-lg uppercase`}>{text}</h2>
         

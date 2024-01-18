@@ -32,8 +32,8 @@ const TaskCard = ({ task, status }) => {
             {task_name}
           </h2>
           <div>
-          <ShowDetailButton _id={_id}></ShowDetailButton>
-          <DeleteTaskButton _id={_id}></DeleteTaskButton>
+            <ShowDetailButton _id={_id}></ShowDetailButton>
+            <DeleteTaskButton _id={_id}></DeleteTaskButton>
           </div>
         </div>
       </div>
