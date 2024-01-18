@@ -8,9 +8,9 @@ import AddTask from "../pages/dashboard/AddTask/AddTask";
 // import TaskSpace from "../pages/dashboard/TaskSpace/TaskSpace";
 import DashboardLanding from "../pages/dashboard/DashboardLanding/DashboardLanding";
 import PrivateRoute from "./PrivateRoute";
-import TaskToDo from "../pages/dashboard/TaskToDo/TaskToDo";
-import OngoingTask from "../pages/dashboard/OngoingTask/OngoingTask";
-import CompletedTask from "../pages/dashboard/CompletedTask/CompletedTask";
+// import TaskToDo from "../pages/dashboard/TaskToDo/TaskToDo";
+// import OngoingTask from "../pages/dashboard/OngoingTask/OngoingTask";
+// import CompletedTask from "../pages/dashboard/CompletedTask/CompletedTask";
 import TaskSpaceList from "../pages/dashboard/TaskSpaceList/TaskSpaceList";
 
 const router = createBrowserRouter([
@@ -52,18 +52,18 @@ const router = createBrowserRouter([
         path: "taskSpace",
         element: <TaskSpaceList></TaskSpaceList>,
       },
-      {
-        path: "todoTask",
-        element: <TaskToDo></TaskToDo>,
-      },
-      {
-        path: "ongoingTask",
-        element: <OngoingTask></OngoingTask>,
-      },
-      {
-        path: "completedTask",
-        element: <CompletedTask></CompletedTask>,
-      },
+      // {
+      //   path: "todoTask",
+      //   element: <TaskToDo></TaskToDo>,
+      // },
+      // {
+      //   path: "ongoingTask",
+      //   element: <OngoingTask></OngoingTask>,
+      // },
+      // {
+      //   path: "completedTask",
+      //   element: <CompletedTask></CompletedTask>,
+      // },
     ],
   },
 ]);

@@ -4,11 +4,13 @@ import { useForm } from "react-hook-form";
 import useAuth from "../../../hooks/useAuth";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const AddTask = () => {
   const { register, handleSubmit, reset } = useForm();
   const { user } = useAuth();
   const axiosSecure = useAxiosSecure();
+  const navigate = useNavigate();
 
   const onSubmit = (data) => {
     // getting the form data
@@ -50,6 +52,7 @@ const AddTask = () => {
 
       // reset the form after submission
       reset();
+      navigate("/dashboard/taskSpace")
     });
   };
 
