@@ -28,9 +28,9 @@ const TaskDetailModal = ({ modalTask }) => {
           <MdDriveFileRenameOutline className="text-2xl lg:text-3xl text-black"></MdDriveFileRenameOutline>{" "}
           {modalTask.task_name}
         </h2>
-        <div className="flex items-start lg:gap-2">
-          <MdSubtitles className="text-3xl lg:text-4xl text-black"></MdSubtitles>
-          <p className="font-bold text-gray-500 text-sm lg:text-base">
+        <div className="flex items-start gap-2">
+          <MdSubtitles className="text-2xl text-black"></MdSubtitles>
+          <p className="font-bold text-gray-500 text-sm lg:text-base flex-1 text-left">
             {modalTask.description}
           </p>
         </div>
