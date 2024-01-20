@@ -93,18 +93,11 @@ const TaskSpaceMain = ({ status }) => {
           {tasksToMap.length}
         </h2>
       </div>
-
       <div>
         {tasksToMap.length > 0 &&
           tasksToMap.map((task) => (
             <TaskCard key={task._id} task={task} status={status}></TaskCard>
           ))}
-      </div>
-
-      <div className="flex items-center justify-center my-16 md:my-32">
-        {tasksToMap.length == 0 && (
-          <span className="loading loading-ring loading-lg"></span>
-        )}
       </div>
     </section>
   );
