@@ -23,7 +23,7 @@ const ForWhom = () => {
         {/* card 1 */}
         <div className="w-11/12 md:w-96 mx-auto bg-slate-100 py-12 px-4 rounded-lg drop-shadow-2xl border-2 border-white hover:border-2 hover:border-[#13ab94] duration-500">
           <PiStudentBold className="text-6xl mx-auto mb-6"></PiStudentBold>
-          <h2 className="font-bold text-xl text-black mb-3">
+          <h2 className="font-bold text-xl text-black mb-3 h-16">
             Empowering Students and Educators
           </h2>
           <div className="ml-4">
@@ -51,7 +51,7 @@ const ForWhom = () => {
         {/* card 2 */}
         <div className="w-11/12 md:w-96 mx-auto bg-slate-100 py-12 px-4 rounded-lg drop-shadow-2xl border-2 border-white hover:border-2 hover:border-[#13ab94] duration-500">
           <IoPeopleCircleOutline className="text-6xl mx-auto mb-6"></IoPeopleCircleOutline>
-          <h2 className="font-bold text-xl text-black mb-3">
+          <h2 className="font-bold text-xl text-black mb-3 h-16">
             Elevating Individual Productivity
           </h2>
           <div className="ml-4">
@@ -79,7 +79,7 @@ const ForWhom = () => {
         {/* card 3 */}
         <div className="w-11/12 md:w-96 mx-auto bg-slate-100 py-12 px-4 rounded-lg drop-shadow-2xl border-2 border-white hover:border-2 hover:border-[#13ab94] duration-500">
           <MdEventAvailable className="text-6xl mx-auto mb-6"></MdEventAvailable>
-          <h2 className="font-bold text-xl text-black mb-3">
+          <h2 className="font-bold text-xl text-black mb-3 h-16">
             Streamlining Event Planning
           </h2>
           <div className="ml-4">
