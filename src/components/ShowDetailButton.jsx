@@ -36,7 +36,6 @@ const ShowDetailButton = ({ _id }) => {
       >
         <TbInfoTriangle></TbInfoTriangle>
       </button>
-
       <dialog id={modalId} className="modal modal-bottom md:modal-middle">
         <TaskDetailModal modalTask={modalTask}></TaskDetailModal>
       </dialog>
