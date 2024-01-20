@@ -88,18 +88,23 @@ const TaskSpaceMain = ({ status }) => {
         className={`${bg} w-11/12 text-center lg:flex items-center justify-between mx-auto rounded-md px-2 lg:px-4 py-3 lg:py-5`}
       >
         <h2 className={`font-bold text-sm lg:text-lg uppercase`}>{text}</h2>
-        
-          <h2 className="bg-white rounded-full mx-auto lg:mx-0 w-6 h-6 md:w-8 md:h-8 text-sm md:text-base lg:text-lg font-bold mt-2 lg:mt-0">
-            {tasksToMap.length}
-          </h2>
-          
-        
+
+        <h2 className="bg-white rounded-full mx-auto lg:mx-0 w-6 h-6 md:w-8 md:h-8 text-sm md:text-base lg:text-lg font-bold mt-2 lg:mt-0">
+          {tasksToMap.length}
+        </h2>
       </div>
+
       <div>
         {tasksToMap.length > 0 &&
           tasksToMap.map((task) => (
             <TaskCard key={task._id} task={task} status={status}></TaskCard>
           ))}
+      </div>
+
+      <div className="flex items-center justify-center my-16 md:my-32">
+        {tasksToMap.length == 0 && (
+          <span className="loading loading-ring loading-lg"></span>
+        )}
       </div>
     </section>
   );

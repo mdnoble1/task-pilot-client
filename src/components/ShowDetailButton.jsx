@@ -5,7 +5,6 @@ import useTasks from "../hooks/useTasks";
 import { useState } from "react";
 import TaskDetailModal from "../pages/dashboard/TaskDetailModal/TaskDetailModal";
 
-
 const ShowDetailButton = ({ _id }) => {
   const [modalTask, setModalTask] = useState({});
   const [tasks] = useTasks();
